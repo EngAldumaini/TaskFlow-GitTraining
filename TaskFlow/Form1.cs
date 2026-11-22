@@ -47,5 +47,25 @@ namespace TaskFlow
 
             lstTasks.Items.RemoveAt(lstTasks.SelectedIndex);
         }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            if (lstTasks.Items.Count == 0)
+            {
+                MessageBox.Show("There are no tasks to clear.");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to delete all tasks?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                lstTasks.Items.Clear();
+            }
+        }
     }
 }
