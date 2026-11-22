@@ -24,7 +24,8 @@ namespace TaskFlow
 
             if (string.IsNullOrWhiteSpace(task))
             {
-                MessageBox.Show("You cannot add an empty task!"); return;
+                MessageBox.Show("Task name is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
             lstTasks.Items.Add(task);
