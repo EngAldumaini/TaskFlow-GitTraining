@@ -32,6 +32,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.lstTasks = new System.Windows.Forms.ListBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnClearAll = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtTask
@@ -40,7 +41,7 @@
             this.txtTask.Margin = new System.Windows.Forms.Padding(5);
             this.txtTask.Multiline = true;
             this.txtTask.Name = "txtTask";
-            this.txtTask.Size = new System.Drawing.Size(416, 81);
+            this.txtTask.Size = new System.Drawing.Size(416, 41);
             this.txtTask.TabIndex = 0;
             // 
             // btnAdd
@@ -75,11 +76,23 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnClearAll
+            // 
+            this.btnClearAll.Location = new System.Drawing.Point(232, 78);
+            this.btnClearAll.Margin = new System.Windows.Forms.Padding(5);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(416, 41);
+            this.btnClearAll.TabIndex = 4;
+            this.btnClearAll.Text = "Clear All Tasks";
+            this.btnClearAll.UseVisualStyleBackColor = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 520);
+            this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lstTasks);
             this.Controls.Add(this.btnAdd);
@@ -100,6 +113,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ListBox lstTasks;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClearAll;
     }
 }
 
