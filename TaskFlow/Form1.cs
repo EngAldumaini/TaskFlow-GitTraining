@@ -34,5 +34,16 @@ namespace TaskFlow
                 txtTask.Focus();
             
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+                if (lstTasks.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select a task to delete.");
+                    return;
+                }
+
+                lstTasks.Items.RemoveAt(lstTasks.SelectedIndex);
+        }
     }
 }
