@@ -16,5 +16,23 @@ namespace TaskFlow
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            
+                string task = txtTask.Text.Trim();
+
+                if (string.IsNullOrWhiteSpace(task))
+                {
+                    MessageBox.Show("Please enter a task.");
+                    return;
+                }
+
+                lstTasks.Items.Add(task);
+
+                txtTask.Clear();
+                txtTask.Focus();
+            
+        }
     }
 }
