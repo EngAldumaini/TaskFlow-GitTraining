@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace TaskFlow
 {
-    // Main window responsible for managing TaskFlow tasks.
     public partial class Form1 : Form
     {
         public Form1()
