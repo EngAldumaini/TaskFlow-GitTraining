@@ -17,6 +17,7 @@ namespace TaskFlow
             InitializeComponent();
         }
 
+        // Validates the task name before adding it to the list.
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
@@ -35,6 +36,7 @@ namespace TaskFlow
 
         }
 
+        // Deletes the selected task from the list.
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (lstTasks.SelectedIndex == -1)
