@@ -11,3 +11,8 @@ This repository is used to practice Git and GitHub.
 - Amend
 - Revert
 - Reset
+- ## Remote Operations
+- Push
+- Fetch
+- Pull
+- Sync
