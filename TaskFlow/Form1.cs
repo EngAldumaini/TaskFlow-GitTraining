@@ -19,31 +19,30 @@ namespace TaskFlow
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
-                string task = txtTask.Text.Trim();
 
-                if (string.IsNullOrWhiteSpace(task))
-                {
-                    MessageBox.Show("Please enter a task.");
-                    return;
-                }
+            string task = txtTask.Text.Trim();
 
-                lstTasks.Items.Add(task);
+            if (string.IsNullOrWhiteSpace(task))
+            {
+                MessageBox.Show("You cannot add an empty task!"); return;
+            }
 
-                txtTask.Clear();
-                txtTask.Focus();
-            
+            lstTasks.Items.Add(task);
+
+            txtTask.Clear();
+            txtTask.Focus();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-                if (lstTasks.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Please select a task to delete.");
-                    return;
-                }
+            if (lstTasks.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a task to delete.");
+                return;
+            }
 
-                lstTasks.Items.RemoveAt(lstTasks.SelectedIndex);
+            lstTasks.Items.RemoveAt(lstTasks.SelectedIndex);
         }
     }
 }
