@@ -36,7 +36,6 @@ namespace TaskFlow
 
         }
 
-        // Deletes the selected task from the list.
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (lstTasks.SelectedIndex == -1)
@@ -66,6 +65,12 @@ namespace TaskFlow
             {
                 lstTasks.Items.Clear();
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("password : 12345");
+
         }
     }
 }
