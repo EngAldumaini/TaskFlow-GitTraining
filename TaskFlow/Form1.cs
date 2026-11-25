@@ -17,6 +17,10 @@ namespace TaskFlow
             InitializeComponent();
         }
 
+        private void printx()
+        {
+            Console.writeLine("x");
+        }
         // Validates the task name before adding it to the list.
         private void btnAdd_Click(object sender, EventArgs e)
         {
